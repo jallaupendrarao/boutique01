@@ -77,7 +77,8 @@
   @media screen and (max-width: 650px) {
     .column {
       width: 100%;
-      display: block;
+      display: inline-block;
+      text-align: center;
     }
   }
 
@@ -88,16 +89,7 @@
   body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
+
 
 input[type=submit] {
   background-color: #6b40ac;
@@ -120,26 +112,38 @@ input[type=submit]:hover {
  
 /* /// design /// */
 
+
 .sec-3-head {
-    margin-top: 0px;
-    margin-bottom: 0px;
+ 
+  margin-top: 0px;
+  margin-bottom: 0px;
   }
   
   .sec-3-card-img {
     width: 250px;
     height: 260px;
+    object-fit: cover;
   }
   
   .card-section-3 {
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: space-between;
   }
   
   .sec-3-card {
     margin: 0px;
+    
   }
-  
+  .sec-3-card:hover{
+    transform: scale(1.02);
+  transition: 0.4s all ease;
+  cursor: pointer;
+  }
   .card-text {
+    text-align: center;
+  }
+  .section-3{
     text-align: center;
   }
   .section-3 {
@@ -150,8 +154,17 @@ input[type=submit]:hover {
     border-radius: 8px;
   }
   
+  
+
   .container-2 {
-    width: 1000px;
+    height: 220px;
+  width: 100%;
+  
+  }
+  .container-2-img{
+    height: 220px;
+  width: 100%;
+  
   }
 
   .sec-3-head h2{
@@ -159,26 +172,41 @@ input[type=submit]:hover {
     font-weight: bold;
   }
   
+ 
+
   @media screen and (max-width: 650px) {
     .column {
       width: 100%;
-      display: block;
+      display: inline-block;
+      text-align: center;
+    
+    }
+    .sec-3-card{
+      padding: 50px;
+    }
+    .card-section-3{
+      padding: 50px;
     }
   }
+
+
   
   /* ///design moblie aqnd pc view */
   @media screen and (max-width: 768px) {
 .card-section-3{
-      display: block;
+      display: inline-block;
       border: 1px solid gray;
       padding: 4px 6px;
       cursor: pointer;
+      text-align: center;
+      
     }
 }
+
   
 /* ///home page background image/// */
   .bgimg{
-    background-image: url('img.boutique.jpeg');
+    background-image: url('https://media.istockphoto.com/photos/tailors-mannequin-picture-id844027612?b=1&k=20&m=844027612&s=170667a&w=0&h=ODVlxzgSKoon_be5Qb4SEX5ZV06I3J-JcFHFzPkgHl0=');
     background-size: 100% 100%;
     background-attachment: fixed;
     width: 100%;
@@ -248,7 +276,7 @@ font-weight: bold;
 }
 
 
-.footer p{
+.flex h3{
   font-size: 30px;
   font-family: "Sacramento", cursive;
 }
